@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Comfortaa:wght@300;400;700&display=swap");
+
+// variable
+$primary-color: #ace1af;
+$secondary-color: #b0ebb4;
+$tertiary-color: #bff6c3;
+$primary-text-color: #333;
+$secondary-text-color: #e0fbe2;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Comfortaa", sans-serif;
+  color: $primary-text-color;
+  background-color: $primary-color;
+}
+
+.app {
+  width: 70%;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+h1 {
+  font-family: "Borel";
+  text-align: center;
+  background-color: $secondary-color;
+  color: $secondary-text-color;
+  font-size: 6rem;
+  padding: 4rem 0 1rem;
+}
+
+.add-form {
+  background-color: $tertiary-color;
+  padding: 2.8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  h3 {
+    margin-right: 2rem;
+    font-size: 3rem;
+  }
+  div {
+    margin: 1rem 0;
+    select {
+      margin-right: 1rem;
+    }
+  }
+}
+
+button,
+select,
+input {
+  background-color: white;
+  font-family: inherit;
+  border: none;
+  border-radius: 3rem;
+  padding: 1.2rem 3.2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+button {
+  background-color: $secondary-color;
+  color: #fefae0;
+  font-weight: bold;
+}
+
+.list {
+  background-image: url(../../img/paper-bg.jpg);
+  background-repeat: repeat-y;
+  background-size: 155%;
+  height: 300px;
+  color: #fefae0;
+  padding: 2.3rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $tertiary-color;
+  }
+  ul {
+    list-style: none;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -1rem;
+    li {
+      color: $secondary-color;
+      font-size: 4rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      /* gap: 2rem; */
+      margin-bottom: 3rem;
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 2.6rem;
+        padding: 0;
+        width: 3rem;
+        height: 3rem;
+        background-color: red;
+        margin-left: 1rem;
+      }
+    }
+  }
+  input[type="checkbox"] {
+    height: 3rem;
+    width: 3rem;
+    accent-color: $secondary-color;
+    margin-right: 1.3rem;
+  }
+}
+
+.actions {
+  background-color: $tertiary-color;
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  button,
+  select {
+    padding: 0.8rem 2.4rem;
+    font-size: 1.4rem;
+    margin: 0 0.8rem;
+  }
+}
+
+.stats {
+  background-color: #bc6c25;
+  color: white;
+  text-align: center;
+  padding: 3.2rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 40%;
+  }
+}
