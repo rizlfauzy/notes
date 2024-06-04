@@ -629,7 +629,6 @@ button{
   background-image:url(../../img/paper-bg.jpg);
   background-repeat:repeat-y;
   background-size:155%;
-  height:300px;
   color:#fefae0;
   padding:2.3rem 0 0;
   display:flex;
@@ -705,12 +704,16 @@ button{
 }
 
 .stats{
-  background-color:#bc6c25;
+  background-color:#b0ebb4;
   color:#fff;
   text-align:center;
   padding:3.2rem 0;
   font-size:2rem;
   font-weight:bold
+}
+
+html{
+  font-size:62.5%
 }
 
 @media(max-width: 768px){
