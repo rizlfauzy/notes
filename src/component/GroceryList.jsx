@@ -1,23 +1,15 @@
+import { useSelector } from "react-redux";
+import Item from "./Item";
+
 export default function GroceryList() {
+  const items = useSelector((state) => state.item.items);
   return (
     <>
       <div className="list">
         <ul>
-          <li>
-            <input type="checkbox" defaultChecked={true} />
-            <span style={{ textDecoration: "line-through" }}>1 Kopi</span>
-            <button>&times;</button>
-          </li>
-          <li>
-            <input type="checkbox" />
-            <span>5 Gula Pasir</span>
-            <button>&times;</button>
-          </li>
-          <li>
-            <input type="checkbox" />
-            <span>3 Air Mineral</span>
-            <button>&times;</button>
-          </li>
+          {items.map((item) => (
+            <Item key={item.id} item={item} />
+          ))}
         </ul>
       </div>
       <div className="actions">
