@@ -3,8 +3,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 export const itemSlice = createSlice({
   name: "item",
   initialState: {
-    items: [
-    ],
+    items: [],
   },
   reducers: {
     handle_checked: (state, action) => {
@@ -41,4 +40,3 @@ export const store = configureStore({
 
 
 export const { handle_checked, handle_submit, handle_remove } = itemSlice.actions;
-export default itemSlice.reducer;

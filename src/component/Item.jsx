@@ -9,6 +9,8 @@ export default function Item({ item }) {
   const handle_click = useCallback(function (e) {
     e.preventDefault();
     try {
+      const conf = confirm("Are you sure you want to remove this item?");
+      if (!conf) return;
       dispatch(handle_remove(e.target.parentElement.id));
     } catch (e) {
       alert(e.message);
